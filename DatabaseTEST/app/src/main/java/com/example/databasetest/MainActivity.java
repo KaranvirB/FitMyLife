@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity{
         });
 
         //Log user in
-        Login.setOnClickListener(view -> {
+        Login.setOnClickListener(view1 -> {
             userLogin();
         });
 
@@ -77,15 +77,12 @@ public class MainActivity extends AppCompatActivity{
         }
 
         //Retrieve user from FireBase
-        mAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-            @Override
-            public void onComplete(@NonNull Task<AuthResult> task) {
+        mAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(task -> {
 
-                if(task.isSuccessful()){
-                    startActivity(new Intent(MainActivity.this,HomePage.class));
-                }else{
-                    Toast.makeText(MainActivity.this, "Login Failed! Please try again.", Toast.LENGTH_SHORT).show();
-                }
+            if(task.isSuccessful()){
+                startActivity(new Intent(MainActivity.this,HomePage.class));
+            }else{
+                Toast.makeText(MainActivity.this, "Login Failed! Please try again.", Toast.LENGTH_SHORT).show();
             }
         });
     }
