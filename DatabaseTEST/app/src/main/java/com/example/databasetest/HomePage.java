@@ -20,7 +20,7 @@ public class HomePage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_page);
 
-        logout.findViewById(R.id.logout);
+        logout = findViewById(R.id.logout);
 
         logout.setOnClickListener(view -> {
             FirebaseAuth.getInstance().signOut();
