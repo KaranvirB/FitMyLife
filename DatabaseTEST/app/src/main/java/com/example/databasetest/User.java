@@ -1,19 +1,21 @@
 package com.example.databasetest;
 
+import android.graphics.Color;
+
 public class User {
 
     public String Name, email;
-    public int age;
+    public double height, weight;
 
     public User(){
 
     }
 
-    public User(String Name, String email, int age){
+    public User(String Name, String email, double height, double weight){
         this.Name = Name;
         this.email = email;
-        this.age = age;
+        this.height = height;
+        this.weight = weight;
     }
 
 }
-

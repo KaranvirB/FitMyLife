@@ -14,7 +14,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class RegisterUser extends AppCompatActivity {
 
-    private EditText name_reg, email_reg, age_reg, password_reg;
+    private EditText name_reg, email_reg, height_reg, weight_reg, password_reg, rePassword;
 
     private FirebaseAuth mAuth;
 
@@ -29,18 +29,22 @@ public class RegisterUser extends AppCompatActivity {
         Button but_button_reg = findViewById(R.id.registerUser);
         name_reg = findViewById(R.id.fullName);
         email_reg = findViewById(R.id.emailRegister);
-        age_reg = findViewById(R.id.age);
+        height_reg = findViewById(R.id.heightRegister);
+        weight_reg = findViewById(R.id.weightRegister);
         password_reg = findViewById(R.id.passwordRegister);
+        rePassword = findViewById(R.id.RePassword);
 
         //Register the user
         but_button_reg.setOnClickListener(view -> registerUser());
     }
 
     private void registerUser() {
-        String name = name_reg.getText().toString();
-        String email = email_reg.getText().toString();
-        String age = age_reg.getText().toString();
-        String password = password_reg.getText().toString();
+        String name = name_reg.getText().toString().trim();
+        String email = email_reg.getText().toString().trim();
+        String height = height_reg.getText().toString().trim();
+        String weight = weight_reg.getText().toString().trim();
+        String password = password_reg.getText().toString().trim();
+        String Repassword = rePassword.getText().toString().trim();
 
         //Input Validation
         if (name.isEmpty()){
@@ -53,9 +57,28 @@ public class RegisterUser extends AppCompatActivity {
             email_reg.requestFocus();
             return;
         }
-        if (age.isEmpty()){
-            age_reg.setError("Age is required!");
-            age_reg.requestFocus();
+        if (height.isEmpty()){
+            height_reg.setError("Height is required!");
+            height_reg.requestFocus();
+            return;
+        }
+        try {
+            Integer.parseInt(height);
+        } catch(NumberFormatException e){
+            height_reg.setError("Height must be a number!");
+            height_reg.requestFocus();
+            return;
+        }
+        if (weight.isEmpty()){
+            weight_reg.setError("Weight is required!");
+            weight_reg.requestFocus();
+            return;
+        }
+        try {
+            Integer.parseInt(weight);
+        } catch(NumberFormatException e){
+            weight_reg.setError("Weight must be a number!");
+            weight_reg.requestFocus();
             return;
         }
         if (password.isEmpty()){
@@ -73,6 +96,11 @@ public class RegisterUser extends AppCompatActivity {
             password_reg.requestFocus();
             return;
         }
+        if (!Repassword.equals(password)){
+            rePassword.setError("Password must match!");
+            rePassword.requestFocus();
+            return;
+        }
 
         //Create user in FireBase
         mAuth.createUserWithEmailAndPassword(email, password)
@@ -80,7 +108,7 @@ public class RegisterUser extends AppCompatActivity {
                     if (task.isSuccessful()) {
 
                         //Add user attributes to realtime database
-                        User user = new User(name,email, Integer.parseInt(age));
+                        User user = new User(name,email,Integer.parseInt(height),Integer.parseInt(weight));
 
                         FirebaseDatabase.getInstance().getReference("Users")
                                 .child(FirebaseAuth.getInstance().getCurrentUser().getUid())

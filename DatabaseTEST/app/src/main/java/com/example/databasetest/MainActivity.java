@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity{
 
         //Send user to register page
         register.setOnClickListener(view -> {
-            startActivity(new Intent(MainActivity.this, RegisterUser.class));
+            startActivity(new Intent(MainActivity.this, SetReminders.class));
         });
 
         //Log user in
@@ -51,8 +51,8 @@ public class MainActivity extends AppCompatActivity{
     }
 
     private void userLogin() {
-        String email = email_log.getText().toString();
-        String password = password_log.getText().toString();
+        String email = email_log.getText().toString().trim();
+        String password = password_log.getText().toString().trim();
 
         //Input Validation
         if (email.isEmpty()){
