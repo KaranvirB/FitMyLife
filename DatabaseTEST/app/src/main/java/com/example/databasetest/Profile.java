@@ -38,6 +38,7 @@ public class Profile extends AppCompatActivity {
     private String userID;
 
     EditText update_weight;
+    double oldWeight;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -80,8 +81,8 @@ public class Profile extends AppCompatActivity {
 
                     user_name.setText(name);
                     user_email.setText(email);
-                    user_weight.setText(Double.toString(height));
-                    user_height.setText(Double.toString(weight));
+                    user_weight.setText(Double.toString(weight));
+                    user_height.setText(Double.toString(height));
                     user_BMI.setText(Double.toString(calculate_BMI(weight, height)));
 
                 }
@@ -98,17 +99,17 @@ public class Profile extends AppCompatActivity {
             user = FirebaseAuth.getInstance().getCurrentUser();
             reference = FirebaseDatabase.getInstance().getReference("Users");
             userID = user.getUid();
+            update_weight= findViewById(R.id.update_weight);
 
             double pounds = Double.parseDouble(update_weight.getText().toString());
 
-            HashMap<String, Object> map = new HashMap<>();
-            map.put("weight", 100.8);
-
-            reference.child(userID).setValue(map).addOnCompleteListener(new OnCompleteListener<Void>() {
+            reference.child(userID).child("weight").setValue(pounds).addOnCompleteListener(new OnCompleteListener<Void>() {
                 @Override
                 public void onComplete(@NonNull Task<Void> task) {
                     Toast.makeText(Profile.this, "Successfully updated weight!", Toast.LENGTH_SHORT).show();
-//                    user_weight.setText(Double.toString(pounds));
+                    oldWeight = Double.parseDouble(user_weight.getText().toString());
+                    reference.child(userID).child("weight2").setValue(oldWeight);
+                    user_weight.setText(Double.toString(pounds));
                 }
             });
 

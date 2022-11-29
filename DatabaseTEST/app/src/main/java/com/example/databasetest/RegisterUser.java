@@ -108,7 +108,7 @@ public class RegisterUser extends AppCompatActivity {
                     if (task.isSuccessful()) {
 
                         //Add user attributes to realtime database
-                        User user = new User(name,email,Integer.parseInt(height),Integer.parseInt(weight));
+                        User user = new User(name,email,Double.parseDouble(height),Double.parseDouble(weight),0);
 
                         FirebaseDatabase.getInstance().getReference("Users")
                                 .child(FirebaseAuth.getInstance().getCurrentUser().getUid())

@@ -30,7 +30,7 @@
 
     <TextView
         android:id="@+id/greeting"
-        android:layout_width="178dp"
+        android:layout_width="393dp"
         android:layout_height="57dp"
         android:fontFamily="cursive"
         android:shadowColor="#000000"
@@ -43,7 +43,7 @@
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.064"
+        app:layout_constraintHorizontal_bias="0.777"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.023" />
@@ -81,15 +81,15 @@
             android:text="Button"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.451"
+            app:layout_constraintHorizontal_bias="0.517"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.15" />
+            app:layout_constraintVertical_bias="0.033" />
 
         <Button
             android:id="@+id/goalsButton"
-            android:layout_width="100dp"
-            android:layout_height="93dp"
+            android:layout_width="166dp"
+            android:layout_height="162dp"
             android:background="@drawable/teal"
             android:shadowColor="#000000"
             android:shadowDx="5"
@@ -99,10 +99,26 @@
             android:textColor="#FFFFFF"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.94"
+            app:layout_constraintHorizontal_bias="0.926"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.927" />
+            app:layout_constraintVertical_bias="0.954" />
+
+        <TextView
+            android:id="@+id/textviewPoundsGreeting"
+            android:layout_width="355dp"
+            android:layout_height="25dp"
+            android:text="TextView"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="italic"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.551"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.126" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

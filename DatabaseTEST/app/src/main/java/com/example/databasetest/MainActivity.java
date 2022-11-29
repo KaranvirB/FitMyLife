@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity{
 
         //Send user to register page
         register.setOnClickListener(view -> {
-            startActivity(new Intent(MainActivity.this, SetReminders.class));
+            startActivity(new Intent(MainActivity.this, RegisterUser.class));
         });
 
         //Log user in

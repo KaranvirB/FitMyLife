@@ -14,10 +14,14 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
+import java.util.concurrent.TimeUnit;
 
 public class SetReminders extends AppCompatActivity {
 
@@ -46,6 +50,7 @@ public class SetReminders extends AppCompatActivity {
         //Adding new goals
         add = findViewById(R.id.add);
         add.setOnClickListener(view -> {
+            daysLeft = 0;
             TextView txt = findViewById(R.id.textView);
             edit_goal_name = findViewById(R.id.edit_goal_name);
             confirm_name = findViewById(R.id.confirm_name);
@@ -65,19 +70,24 @@ public class SetReminders extends AppCompatActivity {
                 public void onSelectedDayChange(CalendarView view, int year, int month, int dayOfMonth) {
                     int selectedDay = dayOfMonth;
                     int selectedMonth = month;
+                    int selectedYear = year;
 
-                    String date = new SimpleDateFormat("MM-dd", Locale.getDefault()).format(new Date());
+                    String date = new SimpleDateFormat("MM-dd-yyyy", Locale.getDefault()).format(new Date());
                     int todayDay = 0;
                     int todayMonth = 0;
+                    int todayYear = 0;
 
-                    String[] arrOfStr = date.split("-", 2);
+                    String[] arrOfStr = date.split("-", 3);
                     for (int i = 0; i < 2; i++){
                         if (i == 0)
                             todayMonth = Integer.parseInt(arrOfStr[i]);
-                        else
+                        else if (i == 1)
                             todayDay = Integer.parseInt(arrOfStr[i]);
+                        else
+                            todayYear = Integer.parseInt(arrOfStr[i]);
                     }
                     daysLeft = (selectedMonth*31 + selectedDay + 31) - (todayMonth*31 + todayDay);
+
                 }
             });
 

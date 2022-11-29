@@ -30,11 +30,14 @@ public class HomePage extends AppCompatActivity {
     Button BMIstats, goalsButton;
     //Navigation Buttons
     ImageView search_Button, profile_Button;
-    private TextView Greeting, Greeting2;
+    private TextView Greeting, Greeting2, textviewPoundsGreeting;
 
     private FirebaseUser user;
     private DatabaseReference reference;
     private String userID;
+
+    double oldPounds = 1;
+    double currPounds = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,14 +52,6 @@ public class HomePage extends AppCompatActivity {
         //Navigation buttons
         search_Button = findViewById(R.id.search_Button);
         profile_Button = findViewById(R.id.profile_Button);
-
-
-//            if (prevPounds > currPounds) {
-//                textviewPoundsGreeting.setText("You have lost: \n" + (Integer.toString((prevPounds - currPounds))) + " pounds! 😀");
-//            } else {
-//                textviewPoundsGreeting.setText("You have gained: \n" + (Integer.toString((currPounds - prevPounds))) + " pounds! 😠");
-//            }
-
 
         goalsButton.setOnClickListener(view3 -> {
             startActivity(new Intent(HomePage.this,SetReminders.class));
@@ -80,6 +75,7 @@ public class HomePage extends AppCompatActivity {
                     String fullName = userProfile.Name;
                     double height = userProfile.height;
                     double weight = userProfile.weight;
+                    double weight2 = userProfile.weight2;
 
                     //Friendly greeting
                     Greeting2.setText(fullName);
@@ -88,6 +84,19 @@ public class HomePage extends AppCompatActivity {
                     double BMI = calculate_BMI(weight,height);
 
                     BMIstats.setText("Current Body Mass: " + Integer.toString((int) BMI) + " - " + BMI_category((int)BMI));
+
+                    currPounds = weight;
+                    oldPounds = weight2;
+
+                    textviewPoundsGreeting = findViewById(R.id.textviewPoundsGreeting);
+
+                    if (oldPounds > currPounds) {
+                        textviewPoundsGreeting.setText("You have lost: " + (Double.toString((oldPounds - currPounds))) + " pounds! Congratulations! 🥳");
+                    } else if(currPounds == 1 || currPounds == oldPounds) {
+                        textviewPoundsGreeting.setText("No change since last visit!");
+                    } else {
+                        textviewPoundsGreeting.setText("You have gained: " + (Double.toString((currPounds - oldPounds))) + " pounds! Keep Grinding! 🏋️");
+                    }
 
                 }
             }
@@ -107,6 +116,7 @@ public class HomePage extends AppCompatActivity {
             } else {
                 Greeting.setText("Good Afternoon,");
             }
+
 
 
     }
