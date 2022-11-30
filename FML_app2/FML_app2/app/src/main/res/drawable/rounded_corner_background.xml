@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <solid android:color="@color/colorPrimaryDark" />
+
+    <corners
+        android:bottomLeftRadius="@dimen/diary_button_corner_radius"
+        android:bottomRightRadius="@dimen/diary_button_corner_radius"
+        android:topLeftRadius="@dimen/diary_button_corner_radius"
+        android:topRightRadius="@dimen/diary_button_corner_radius" />
+
+</shape>

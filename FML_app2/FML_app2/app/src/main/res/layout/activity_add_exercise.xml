@@ -1,0 +1,93 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/teal"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_add_exercise"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/darkPink">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/diary_create_exercise"
+            android:textColor="@color/colorLightText"
+            android:textSize="20sp" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/diary_exercise_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:text="@string/diary_add_exercise_title" />
+
+    <EditText
+        android:id="@+id/diary_exercise_title_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/add_exercise_title_example"
+        android:minHeight="48dp"
+        android:paddingLeft="20dp" />
+
+    <TextView
+        android:id="@+id/diary_exercise_unit_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:text="@string/diary_exercise_unit_name" />
+
+    <EditText
+        android:id="@+id/diary_exercise_unit_name_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/add_exercise_unit_name_example"
+        android:maxLines="1"
+        android:minHeight="48dp"
+        android:paddingLeft="20dp" />
+
+    <TextView
+        android:id="@+id/diary_exercise_amount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:text="@string/diary_exercise_length" />
+
+    <EditText
+        android:id="@+id/diary_exercise_amount_edit"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:hint="@string/add_exercise_length_example"
+        android:inputType="numberDecimal"
+        android:maxLines="1"
+        android:paddingLeft="20dp"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/diary_exercise_calorie_per_unit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:text="@string/diary_content_calorie_per_unit" />
+
+    <EditText
+        android:id="@+id/diary_exercise_calorie_per_unit_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/add_food_calorie_per_unit_example"
+        android:inputType="numberDecimal"
+        android:maxLines="1"
+        android:minHeight="48dp"
+        android:paddingLeft="20dp" />
+
+
+</LinearLayout>

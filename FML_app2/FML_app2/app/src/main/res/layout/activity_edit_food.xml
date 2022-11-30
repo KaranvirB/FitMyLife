@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/teal"
+    android:orientation="vertical"
+
+    tools:context=".EditMealActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_edit_meal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/darkPink"
+        >
+        <TextView
+            android:text="@string/diary_edit_food"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textColor="@color/colorLightText"
+            android:layout_gravity="center"
+            android:textSize="20sp"
+          />
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/diary_content_title"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"/>
+
+    <EditText
+        android:id="@+id/diary_content_edit_title_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/add_food_title_example"
+        android:maxLength="40"
+        android:minHeight="48dp"
+        android:paddingLeft="20dp" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/diary_food_unit_name"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"/>
+
+    <EditText
+        android:id="@+id/diary_content_edit_unit_name_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/add_food_unit_name_example"
+        android:inputType=""
+        android:maxLength="30"
+        android:maxLines="1"
+        android:minHeight="48dp"
+        android:paddingLeft="20dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/diary_content_amount"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"/>
+
+    <EditText
+        android:id="@+id/diary_content_edit_amount_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/add_food_amount_example"
+        android:inputType="numberDecimal"
+        android:maxLength="5"
+        android:maxLines="1"
+        android:minHeight="48dp"
+        android:paddingLeft="20dp" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/diary_content_calory_per_unit"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"/>
+
+    <EditText
+        android:id="@+id/diary_content_edit_calory_per_unit_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/add_food_calory_per_unit_example"
+        android:inputType="numberDecimal"
+        android:maxLength="5"
+        android:maxLines="1"
+        android:minHeight="48dp"
+        android:paddingLeft="20dp" />
+
+
+
+</LinearLayout>

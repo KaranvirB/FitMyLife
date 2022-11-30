@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/newWeight"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/teal"
+    tools:context=".HomePage">
+
+    <TextView
+        android:id="@+id/greeting2"
+        android:layout_width="190dp"
+        android:layout_height="49dp"
+        android:fontFamily="serif"
+        android:shadowColor="#000000"
+        android:shadowDx="5"
+        android:shadowDy="5"
+        android:shadowRadius="2"
+        android:text="TextView"
+        android:textColor="#FFFFFF"
+        android:textSize="34sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.131"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.101" />
+
+    <TextView
+        android:id="@+id/greeting"
+        android:layout_width="371dp"
+        android:layout_height="53dp"
+        android:fontFamily="cursive"
+        android:shadowColor="#000000"
+        android:shadowDx="5"
+        android:shadowDy="5"
+        android:shadowRadius="2"
+        android:text="TextView"
+        android:textColor="#16E8B7"
+        android:textSize="48sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.725"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="384dp"
+        android:layout_height="514dp"
+        android:background="@drawable/roundbox"
+        android:backgroundTint="#8BFFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.481"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.654">
+
+        <ImageView
+            android:id="@+id/copium"
+            android:layout_width="34dp"
+            android:layout_height="32dp"
+            android:background="#00FFFFFF"
+            android:backgroundTint="#00FFFFFF"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.517"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.192"
+            app:srcCompat="@drawable/copium" />
+
+        <Button
+            android:id="@+id/mealsCalories"
+            android:layout_width="165dp"
+            android:layout_height="165dp"
+            android:background="#3C78A5"
+            android:text="Record Meals"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.073"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.358"
+            android:shadowColor="#000000"
+            android:shadowDx="5"
+            android:shadowDy="5"
+            android:shadowRadius="2"/>
+
+        <Button
+            android:id="@+id/BMIstats"
+            android:layout_width="355dp"
+            android:layout_height="32dp"
+            android:background="#FF0000"
+            android:text="Button"
+            android:textColor="#000000"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.517"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.033" />
+
+        <Button
+            android:id="@+id/goalsButton"
+            android:layout_width="165dp"
+            android:layout_height="165dp"
+            android:background="@drawable/teal"
+            android:shadowColor="#000000"
+            android:shadowDx="5"
+            android:shadowDy="5"
+            android:shadowRadius="2"
+            android:text="Set Reminders"
+            android:textColor="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.926"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.916" />
+
+        <TextView
+            android:id="@+id/textviewPoundsGreeting"
+            android:layout_width="355dp"
+            android:layout_height="25dp"
+            android:text="TextView"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="italic"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.551"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.126" />
+
+        <Button
+            android:id="@+id/buttonPro"
+            android:layout_width="165dp"
+            android:layout_height="165dp"
+            android:background="#39739D"
+            android:text="Profile"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.94"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.358"
+            android:shadowColor="#000000"
+            android:shadowDx="5"
+            android:shadowDy="5"
+            android:shadowRadius="2"/>
+
+        <Button
+            android:id="@+id/ExerciseInfo"
+            android:layout_width="165dp"
+            android:layout_height="165dp"
+            android:background="@drawable/teal"
+            android:shadowColor="#000000"
+            android:shadowDx="5"
+            android:shadowDy="5"
+            android:shadowRadius="2"
+            android:text="Exercise Info"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.073"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.916" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:background="@drawable/roundbox"
+        android:backgroundTint="#94FFFFFF"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/search_Button"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scaleType="center"
+            app:srcCompat="@drawable/ic_baseline_search_24" />
+
+        <ImageView
+            android:id="@+id/home_Button"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/ic_baseline_home_24" />
+
+        <ImageView
+            android:id="@+id/profile_Button"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scaleType="center"
+            app:srcCompat="@drawable/ic_baseline_person_24" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

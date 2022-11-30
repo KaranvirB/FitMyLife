@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity2">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary">
+
+        <TextView
+            android:id="@+id/main_toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/app_name"
+            android:textColor="@color/colorLightText"
+            android:textSize="20sp"
+            app:drawableEndCompat="@drawable/ic_date_range_black_24dp" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <TableLayout
+        android:id="@+id/table"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar_main"
+        android:background="@color/colorWhite"
+        android:stretchColumns="*"
+        android:padding="10dp">
+        <TableRow>
+            <TextView
+                android:id="@+id/goal_number"
+                tools:text="2000"
+                android:textColor="@color/black"
+                android:gravity="center" />
+            <TextView
+                android:text="@string/minus"
+                android:gravity="center"
+                android:textColor="@color/black"
+                />
+            <TextView
+                android:id="@+id/food_number"
+                tools:text="800"
+                android:textColor="@color/black"
+
+                android:gravity="center"/>
+            <TextView
+                android:text="@string/plus"
+                android:textColor="@color/black"
+
+                android:gravity="center"/>
+            <TextView
+                android:id="@+id/exercise_number"
+                tools:text="500"
+                android:textColor="@color/black"
+
+                android:gravity="center"/>
+            <TextView
+                android:text="@string/equal"
+                android:textColor="@color/black"
+
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/remaining_number"
+                android:gravity="center"
+
+                android:textColor="#2E7D32"
+                tools:text="1700" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:text="@string/goal"
+                android:textColor="@color/black"
+
+                android:gravity="center"/>
+            <TextView
+                tools:text=""
+                android:textColor="@color/black"
+
+                android:gravity="center"/>
+            <TextView
+                android:text="@string/food"
+                android:textColor="@color/black"
+
+                android:gravity="center"/>
+            <TextView
+                tools:text=""
+                android:textColor="@color/black"
+
+                android:gravity="center"/>
+            <TextView
+                android:text="@string/exercise"
+                android:textColor="@color/black"
+
+                android:gravity="center"/>
+            <TextView
+                tools:text=""
+                android:textColor="@color/black"
+
+                android:gravity="center"/>
+            <TextView
+                android:text="@string/remaining"
+                android:textColor="@color/black"
+
+                android:gravity="center"/>
+        </TableRow>
+    </TableLayout>
+
+    <View
+        android:id="@+id/main_hr"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorBorderLine"
+        android:layout_below="@id/table"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:clipToPadding="true"
+        android:fitsSystemWindows="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/main_hr"
+        android:fillViewport="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <FrameLayout
+                android:id="@+id/diary_breakfast_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/diary_breakfast"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <FrameLayout
+                android:id="@+id/diary_breakfast_footer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <FrameLayout
+                android:id="@+id/diary_lunch_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/diary_lunch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <FrameLayout
+                android:id="@+id/diary_lunch_footer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <FrameLayout
+                android:id="@+id/diary_dinner_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/diary_dinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <FrameLayout
+                android:id="@+id/diary_dinner_footer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <FrameLayout
+                android:id="@+id/diary_snack_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/diary_snack"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <FrameLayout
+                android:id="@+id/diary_snack_footer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <FrameLayout
+                android:id="@+id/diary_exercise_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/diary_exercise"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <FrameLayout
+                android:id="@+id/diary_exercise_footer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+
+
+    </androidx.core.widget.NestedScrollView>
+
+    <Button
+        android:id="@+id/goBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="313dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="10dp"
+        android:text="Home" />
+
+</RelativeLayout>

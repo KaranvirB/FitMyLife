@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/diary_item_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#4DBAB0">
+
+    <TextView
+        android:id="@+id/diary_content_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@id/diary_content_value"
+        android:ellipsize="end"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        android:singleLine="true"
+        android:textColor="@color/black"
+        tools:text="Fried Chicken" />
+
+    <TextView
+        android:id="@+id/diary_content_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:gravity="right"
+        android:textColor="@color/black"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        tools:text="200" />
+
+    <TextView
+        android:id="@+id/diary_content_amount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:layout_below="@id/diary_content_title"
+        android:ellipsize="end"
+        android:paddingTop="10dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="10dp"
+        tools:text="1 pound" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/diary_content_amount"
+        android:background="@color/colorBorderLine" />
+
+</RelativeLayout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical"
+    tools:context=".SearchNutrientsActivity">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_search_meal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/darkPink"
+        >
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/search_meal_search_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="10dp"
+            android:background="#61273B"
+            app:defaultQueryHint="@string/add_food_title_example"
+            app:iconifiedByDefault="false"
+            tools:ignore="MissingClass">
+
+        </androidx.appcompat.widget.SearchView>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:id="@+id/search_food_result_from_internet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,98 @@
+{
+  "project_info": {
+    "project_number": "909195955210",
+    "firebase_url": "https://fir-project-60ea6-default-rtdb.firebaseio.com",
+    "project_id": "fir-project-60ea6",
+    "storage_bucket": "fir-project-60ea6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:909195955210:android:13026dd6248877c6fce3f3",
+        "android_client_info": {
+          "package_name": "com.example.databasetest"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "909195955210-ncmboodmqf6d9o6qbdbms6sa8d6t9b0u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyApU-Ax9s_dhe1Es6fYEuNN8NIOcomWvZo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "909195955210-ncmboodmqf6d9o6qbdbms6sa8d6t9b0u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:909195955210:android:7442a00c745f0dbffce3f3",
+        "android_client_info": {
+          "package_name": "com.example.fml_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "909195955210-ncmboodmqf6d9o6qbdbms6sa8d6t9b0u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyApU-Ax9s_dhe1Es6fYEuNN8NIOcomWvZo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "909195955210-ncmboodmqf6d9o6qbdbms6sa8d6t9b0u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:909195955210:android:71c3997792efb048fce3f3",
+        "android_client_info": {
+          "package_name": "com.example.holdon"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "909195955210-ncmboodmqf6d9o6qbdbms6sa8d6t9b0u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyApU-Ax9s_dhe1Es6fYEuNN8NIOcomWvZo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "909195955210-ncmboodmqf6d9o6qbdbms6sa8d6t9b0u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

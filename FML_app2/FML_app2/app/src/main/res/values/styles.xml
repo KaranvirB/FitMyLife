@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <!--<item name="colorPrimary">@color/colorPrimary</item> -->
+        <item name="colorPrimary">@color/colorBurgundy</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="MyToolbar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@color/darkPink</item>
+    </style>
+
+    <style name="MyToolbarTextLight">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/colorLightText</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textSize">@dimen/toolbar_textSize</item>
+    </style>
+
+    <dimen name="toolbar_textSize">20sp</dimen>
+
+    <style name="NormalTextLight">
+        <item name="android:textColor">@color/colorLightText</item>
+    </style>
+
+    <style name="KeepDietThemeButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">@dimen/large_padding</item>
+        <item name="android:layout_marginRight">@dimen/large_padding</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="android:padding">@dimen/small_padding</item>
+        <item name="android:background">@drawable/rounded_corner_background_border</item>
+    </style>
+
+
+</resources>

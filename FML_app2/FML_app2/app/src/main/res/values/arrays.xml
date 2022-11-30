@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="exercise">
+        <item>Cycling</item>
+        <item>Dance</item>
+        <item>Elliptical</item>
+        <item>Hiking</item>
+        <item>Jogging</item>
+        <item>JumpRope</item>
+        <item>Pilates</item>
+        <item>PushUp</item>
+        <item>Stair</item>
+        <item>Strength</item>
+        <item>Stretching</item>
+        <item>Swimming</item>
+        <item>Walking</item>
+        <item>Yoga</item>
+
+    </string-array>
+</resources>
